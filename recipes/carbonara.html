@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Classic Spaghetti Carbonara — Recipe Studio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles/main.css" />
+</head>
+<body>
+  <div class="container">
+    <header class="nav">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <p class="title">Recipe Studio</p>
+          <p class="sub">atskiri puslapiai • minimal</p>
+        </div>
+      </div>
+      <a class="btn" href="../index.html">← Atgal</a>
+    </header>
+
+    <article class="recipe">
+      <div class="recipe-hero" style="background-image:url('https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1600&q=70')" role="img" aria-label="Carbonara nuotrauka"></div>
+      <div class="recipe-body">
+        <div class="tags">
+          <span class="tag accent">pasta</span>
+          <span class="tag">greita</span>
+          <span class="tag">klasika</span>
+        </div>
+
+        <h1 class="recipe-title">Classic Spaghetti Carbonara</h1>
+        <p class="recipe-sub">⏱️ 20 min • ⚡ Lengva • Porcijos: 2</p>
+
+        <div class="cols">
+          <section class="box">
+            <h4>Ingredientai</h4>
+            <ul>
+              <li>200 g spagečių</li>
+              <li>2 kiaušinių tryniai + 1 kiaušinis</li>
+              <li>70–90 g kietojo sūrio (pecorino/parmezanas)</li>
+              <li>80–120 g guanciale/pancetta (arba šoninė)</li>
+              <li>Juodieji pipirai, druska</li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h4>Gaminimas</h4>
+            <ul>
+              <li>Užvirk vandenį, pasūdyk, išvirk pastą al dente. Pasilik ~150 ml vandens.</li>
+              <li>Keptuvėje iškepk guanciale/pancetta iki traškumo (be papildomo aliejaus).</li>
+              <li>Dubenyje išplak trynius+kiaušinį su sūriu ir daug pipirų.</li>
+              <li>Nukelk keptuvę nuo ugnies, sudėk pastą ir šlakelį vandens.</li>
+              <li>Supilk kiaušinių-sūrio mišinį ir greitai maišyk, kad susidarytų kremiškas padažas (neplak ant ugnies).</li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </article>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Recipe Studio</span>
+      <span><a href="../index.html">Visi receptai</a></span>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelector("#year").textContent
