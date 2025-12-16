@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+header {
+    background-color: #5cb85c; /* Green color for header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+main {
+    width: 80%;
+    margin: 20px auto;
+    background-color: white;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the Recipe List page */
+.recipe-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.recipe-list li {
+    margin: 10px 0;
+    font-size: 1.2em;
+}
+
+.recipe-list a {
+    text-decoration: none;
+    color: #007bff; /* Blue link color */
+    padding: 5px;
+    display: block;
+    border-bottom: 1px dashed #ccc;
+}
+
+.recipe-list a:hover {
+    color: #0056b3;
+    background-color: #e9ecef;
+}
+
+/* Style for the individual Recipe page */
+.recipe-content h2 {
+    color: #d9534f; /* Reddish color for section headings */
+    border-bottom: 2px solid #d9534f;
+    padding-bottom: 5px;
+    margin-top: 25px;
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
