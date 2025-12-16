@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Recipe Studio — nauji įdomūs receptai</title>
+  <meta name="description" content="Minimalistinė receptų svetainė su atskirais puslapiais." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+
+<body>
+  <div class="container">
+    <header class="nav">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <p class="title">Recipe Studio</p>
+          <p class="sub">nauji įdomūs receptai • minimal</p>
+        </div>
+      </div>
+
+      <a class="btn" href="recipes/carbonara.html">Dienos receptas →</a>
+    </header>
+
+    <section class="hero" aria-label="Įžanga">
+      <div class="hero-media" role="img" aria-label="Hero nuotrauka"></div>
+      <div class="hero-body">
+        <span class="kicker">✨ Šviežia • paprasta • skanu</span>
+        <h1 class="hero-h1">
+          HEY, <span class="hl">DINNER</span><br/>ALMOST READY.
+        </h1>
+        <p class="hero-p">
+          3 receptai pradžiai. Kiekvienas turi savo atskirą puslapį — be modalų, be “vieno failo”.
+        </p>
+        <div class="row">
+          <a class="btn primary" href="#recipes">Žiūrėt receptus</a>
+          <a class="btn" href="recipes/cookies.html">Desertas →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recipes">
+      <div class="section-head">
+        <div>
+          <h2 class="section-title">Receptai</h2>
+          <p class="section-hint">Paieška veikia tik šiame puslapyje, receptai — atskiruose html.</p>
+        </div>
+
+        <div class="search">
+          <span class="icon" aria-hidden="true">🔎</span>
+          <input id="search" type="search" placeholder="Ieškok (pasta, greita, desertas…)" autocomplete="off" />
+        </div>
+      </div>
+
+      <main class="grid" id="grid">
+        <a class="card" href="recipes/carbonara.html" data-title="carbonara pasta greita">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1400&q=70')"></div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag accent">pasta</span>
+              <span class="tag">greita</span>
+              <span class="tag">klasika</span>
+            </div>
+            <h3>Classic Spaghetti Carbonara</h3>
+            <p>Minimal ingredientai, maksimalus “wow”. Tikra tekstūra be grietinėlės.</p>
+            <div class="meta">
+              <span>⏱️ 20 min</span>
+              <span>⚡ Lengva</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="recipes/stirfry.html" data-title="vistiena azijietiska greita wok">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1400&q=70')"></div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag accent">wok</span>
+              <span class="tag">baltymai</span>
+              <span class="tag">greita</span>
+            </div>
+            <h3>Quick Chicken Stir-Fry</h3>
+            <p>Traškūs daržovių kraštai, blizgus padažas, ir viskas per vieną keptuvę.</p>
+            <div class="meta">
+              <span>⏱️ 25 min</span>
+              <span>⚡ Lengva</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="recipes/cookies.html" data-title="sausainiai desertas sokoladas">
+          <div class="card-img" style="background-image:url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1400&q=70')"></div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag accent">desertas</span>
+              <span class="tag">šokoladas</span>
+              <span class="tag">chewy</span>
+            </div>
+            <h3>Chocolate Chip Cookies</h3>
+            <p>Minkšti viduje, traškūs kraštuose. Paprasta, bet labai “premium”.</p>
+            <div class="meta">
+              <span>⏱️ 35 min</span>
+              <span>⚡ Lengva</span>
+            </div>
+          </div>
+        </a>
+      </main>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Recipe Studio</span>
+      <span>Demo nuotraukos: Unsplash</span>
+    </footer>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
