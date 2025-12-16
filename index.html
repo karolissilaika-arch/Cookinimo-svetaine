@@ -3,677 +3,75 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Recipe Studio — nauji, įdomūs receptai</title>
-  <meta name="description" content="Moderni minimalistinė receptų svetainė su naujais įdomiais receptais." />
+  <title>Chocolate Chip Cookies — Recipe Studio</title>
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&family=Playfair+Display:wght@500;700&display=swap" rel="stylesheet">
-
-  <style>
-    :root{
-      --bg: #0b0d12;
-      --panel: rgba(255,255,255,.06);
-      --panel2: rgba(255,255,255,.09);
-      --text: rgba(255,255,255,.90);
-      --muted: rgba(255,255,255,.68);
-      --line: rgba(255,255,255,.12);
-      --shadow: 0 18px 60px rgba(0,0,0,.45);
-      --radius: 18px;
-      --radius2: 26px;
-      --max: 1100px;
-      --accent1: #7c5cff;
-      --accent2: #00d4ff;
-      --accent3: #ff4fd8;
-    }
-
-    *{ box-sizing:border-box; }
-    html,body{ height:100%; }
-    body{
-      margin:0;
-      color:var(--text);
-      background:
-        radial-gradient(900px 420px at 10% -5%, rgba(124,92,255,.35), transparent 60%),
-        radial-gradient(700px 380px at 90% 0%, rgba(0,212,255,.28), transparent 55%),
-        radial-gradient(900px 520px at 70% 105%, rgba(255,79,216,.18), transparent 55%),
-        var(--bg);
-      font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-      line-height:1.5;
-      overflow-x:hidden;
-    }
-
-    a{ color:inherit; text-decoration:none; }
-    .wrap{ max-width:var(--max); margin:0 auto; padding:28px 18px 70px; }
-
-    /* Top bar */
-    .topbar{
-      display:flex; align-items:center; justify-content:space-between;
-      gap:14px;
-      padding:14px 16px;
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
-      border-radius:var(--radius2);
-      backdrop-filter: blur(12px);
-      box-shadow: var(--shadow);
-    }
-    .brand{
-      display:flex; align-items:center; gap:10px;
-      min-width: 170px;
-    }
-    .logo{
-      width:38px; height:38px; border-radius:12px;
-      background: radial-gradient(circle at 30% 25%, var(--accent2), transparent 55%),
-                  radial-gradient(circle at 70% 70%, var(--accent3), transparent 58%),
-                  radial-gradient(circle at 55% 35%, var(--accent1), transparent 55%),
-                  rgba(255,255,255,.08);
-      border:1px solid rgba(255,255,255,.12);
-      box-shadow: 0 14px 30px rgba(0,0,0,.35);
-    }
-    .brand h1{
-      font-family:"Playfair Display", serif;
-      font-size:18px;
-      margin:0;
-      letter-spacing:.2px;
-    }
-    .brand p{ margin:0; font-size:12px; color:var(--muted); }
-
-    .actions{
-      display:flex; align-items:center; gap:10px; flex:1;
-      justify-content:flex-end;
-    }
-
-    .search{
-      position:relative;
-      width:min(420px, 100%);
-    }
-    .search input{
-      width:100%;
-      padding:12px 42px 12px 42px;
-      border-radius:14px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      outline:none;
-      transition: .2s ease;
-    }
-    .search input:focus{
-      border-color: rgba(124,92,255,.6);
-      box-shadow: 0 0 0 4px rgba(124,92,255,.18);
-      background:rgba(255,255,255,.08);
-    }
-    .search .icon{
-      position:absolute; left:14px; top:50%; transform:translateY(-50%);
-      opacity:.7;
-    }
-    .pill{
-      padding:10px 12px;
-      border-radius:999px;
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.06);
-      color:var(--text);
-      font-size:13px;
-      display:inline-flex; gap:8px; align-items:center;
-      transition:.2s ease;
-      cursor:pointer;
-      user-select:none;
-    }
-    .pill:hover{ background:rgba(255,255,255,.09); transform: translateY(-1px); }
-    .pill:active{ transform: translateY(0px); }
-
-    /* Hero */
-    .hero{
-      margin-top:22px;
-      display:grid;
-      grid-template-columns: 1.15fr .85fr;
-      gap:16px;
-      align-items:stretch;
-    }
-    .heroCard{
-      border:1px solid var(--line);
-      background:linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
-      border-radius:var(--radius2);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-      position:relative;
-      padding:22px;
-      backdrop-filter: blur(12px);
-    }
-    .heroCard h2{
-      font-family:"Playfair Display", serif;
-      font-size:34px;
-      margin:0 0 10px;
-      letter-spacing:.2px;
-      line-height:1.12;
-    }
-    .heroCard p{
-      margin:0 0 14px;
-      color:var(--muted);
-      max-width: 60ch;
-    }
-    .kpis{
-      display:flex; flex-wrap:wrap; gap:10px;
-      margin-top:14px;
-    }
-    .kpi{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.05);
-      padding:10px 12px;
-      border-radius:14px;
-      font-size:13px;
-      color:var(--muted);
-    }
-    .kpi strong{ color:var(--text); font-weight:700; }
-
-    .featured{
-      display:grid;
-      grid-template-rows: 1fr auto;
-      padding:0;
-    }
-    .featuredImg{
-      min-height: 230px;
-      background:
-        linear-gradient(180deg, rgba(0,0,0,.10), rgba(0,0,0,.60)),
-        url("https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1200&q=70");
-      background-size:cover;
-      background-position:center;
-      border-bottom:1px solid var(--line);
-    }
-    .featuredBody{ padding:18px 18px 16px; }
-    .badge{
-      display:inline-flex; gap:8px; align-items:center;
-      font-size:12px; color:rgba(255,255,255,.78);
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(0,0,0,.25);
-      padding:7px 10px;
-      border-radius:999px;
-    }
-    .featuredBody h3{
-      margin:10px 0 6px;
-      font-size:18px;
-      letter-spacing:.2px;
-    }
-    .featuredBody p{ margin:0 0 12px; color:var(--muted); font-size:13px; }
-    .btn{
-      display:inline-flex; align-items:center; gap:10px;
-      padding:11px 13px;
-      border-radius:14px;
-      border:1px solid rgba(255,255,255,.16);
-      background:rgba(255,255,255,.07);
-      transition:.2s ease;
-      font-size:13px;
-      cursor:pointer;
-    }
-    .btn:hover{ background:rgba(255,255,255,.10); transform: translateY(-1px); }
-    .btn:active{ transform: translateY(0px); }
-
-    /* Grid */
-    .sectionHeader{
-      margin:28px 4px 12px;
-      display:flex;
-      align-items:flex-end;
-      justify-content:space-between;
-      gap:12px;
-    }
-    .sectionHeader h3{
-      margin:0;
-      font-size:15px;
-      letter-spacing:.6px;
-      text-transform:uppercase;
-      color:rgba(255,255,255,.78);
-    }
-    .sectionHeader .hint{ color:var(--muted); font-size:13px; margin:0; }
-
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap:14px;
-    }
-
-    .card{
-      border:1px solid var(--line);
-      background:rgba(255,255,255,.04);
-      border-radius:var(--radius);
-      overflow:hidden;
-      box-shadow: 0 10px 40px rgba(0,0,0,.35);
-      transition:.22s ease;
-      position:relative;
-      min-height: 340px;
-    }
-    .card:hover{ transform: translateY(-3px); background:rgba(255,255,255,.06); }
-    .cardImg{
-      height:165px;
-      background-size:cover;
-      background-position:center;
-      border-bottom:1px solid var(--line);
-    }
-    .cardBody{ padding:14px 14px 16px; }
-    .meta{ display:flex; gap:8px; flex-wrap:wrap; margin-bottom:10px; }
-    .tag{
-      font-size:12px;
-      color:rgba(255,255,255,.75);
-      border:1px solid rgba(255,255,255,.14);
-      background:rgba(255,255,255,.04);
-      padding:6px 10px;
-      border-radius:999px;
-    }
-    .card h4{ margin:0 0 6px; font-size:16px; letter-spacing:.2px; }
-    .card p{ margin:0 0 12px; color:var(--muted); font-size:13px; }
-
-    .infoRow{
-      display:flex; justify-content:space-between; gap:10px;
-      font-size:12px; color:rgba(255,255,255,.70);
-      padding-top:10px;
-      border-top:1px solid rgba(255,255,255,.10);
-    }
-
-    /* Modal */
-    dialog{
-      width:min(860px, calc(100% - 28px));
-      border:none;
-      padding:0;
-      border-radius:22px;
-      background: rgba(15,18,26,.88);
-      color:var(--text);
-      box-shadow: 0 30px 100px rgba(0,0,0,.65);
-      backdrop-filter: blur(16px);
-      border:1px solid rgba(255,255,255,.12);
-    }
-    dialog::backdrop{
-      background: rgba(0,0,0,.55);
-      backdrop-filter: blur(4px);
-    }
-    .modalTop{
-      display:flex; justify-content:space-between; align-items:center;
-      padding:14px 14px 10px;
-      border-bottom:1px solid rgba(255,255,255,.10);
-    }
-    .modalTop strong{ font-size:13px; color:rgba(255,255,255,.80); letter-spacing:.5px; text-transform:uppercase; }
-    .close{
-      border:1px solid rgba(255,255,255,.14);
-      background: rgba(255,255,255,.06);
-      color:var(--text);
-      width:40px; height:40px;
-      border-radius:14px;
-      cursor:pointer;
-      transition:.2s ease;
-    }
-    .close:hover{ background: rgba(255,255,255,.10); transform: translateY(-1px); }
-
-    .modalGrid{
-      display:grid;
-      grid-template-columns: 1.1fr .9fr;
-      gap:0;
-    }
-    .modalImg{
-      min-height: 320px;
-      background-size:cover;
-      background-position:center;
-      border-right:1px solid rgba(255,255,255,.10);
-    }
-    .modalBody{ padding:16px 16px 18px; }
-    .modalBody h3{
-      margin:4px 0 10px;
-      font-family:"Playfair Display", serif;
-      font-size:26px;
-      line-height:1.15;
-    }
-    .modalBody .sub{ margin:0 0 10px; color:var(--muted); font-size:13px; }
-    .cols{
-      display:grid;
-      grid-template-columns: 1fr 1fr;
-      gap:12px;
-      margin-top:12px;
-    }
-    .box{
-      border:1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.04);
-      border-radius:16px;
-      padding:12px;
-    }
-    .box h5{
-      margin:0 0 8px;
-      font-size:13px;
-      letter-spacing:.5px;
-      text-transform:uppercase;
-      color:rgba(255,255,255,.78);
-    }
-    ul{ padding-left:18px; margin:0; color:rgba(255,255,255,.78); }
-    li{ margin:6px 0; }
-    .steps li{ color:rgba(255,255,255,.80); }
-
-    footer{
-      margin-top:28px;
-      color:rgba(255,255,255,.55);
-      font-size:12px;
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:12px;
-      padding:14px 6px 0;
-    }
-
-    /* Responsive */
-    @media (max-width: 900px){
-      .hero{ grid-template-columns: 1fr; }
-      .grid{ grid-template-columns: repeat(2, 1fr); }
-      .modalGrid{ grid-template-columns: 1fr; }
-      .modalImg{ border-right:none; border-bottom:1px solid rgba(255,255,255,.10); }
-    }
-    @media (max-width: 560px){
-      .actions{ justify-content:stretch; }
-      .brand{ min-width:auto; }
-      .grid{ grid-template-columns: 1fr; }
-      .heroCard h2{ font-size:28px; }
-    }
-
-    /* Motion safety */
-    @media (prefers-reduced-motion: reduce){
-      *{ transition:none !important; scroll-behavior:auto !important; }
-    }
-  </style>
+  <link rel="stylesheet" href="../styles/main.css" />
 </head>
-
 <body>
-  <div class="wrap">
-
-    <header class="topbar">
-      <div class="brand" aria-label="Svetainės pavadinimas">
-        <div class="logo" aria-hidden="true"></div>
+  <div class="container">
+    <header class="nav">
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
         <div>
-          <h1>Recipe Studio</h1>
-          <p>Nauji įdomūs receptai • minimalizmas</p>
+          <p class="title">Recipe Studio</p>
+          <p class="sub">atskiri puslapiai • minimal</p>
         </div>
       </div>
-
-      <div class="actions">
-        <div class="search" role="search">
-          <span class="icon" aria-hidden="true">🔎</span>
-          <input id="search" type="search" placeholder="Ieškok receptų (pvz. “pasta”, “desertas”, “greita”)…" autocomplete="off" />
-        </div>
-        <button class="pill" id="shuffle" title="Parinkti atsitiktinį receptą">🎲 Atsitiktinai</button>
-      </div>
+      <a class="btn" href="../index.html">l
+      ">← Atgal</a>
     </header>
 
-    <section class="hero" aria-label="Įžanga">
-      <div class="heroCard">
-        <h2>Mažiau triukšmo. Daugiau skonio.</h2>
-        <p>
-          Atrinkti receptai, kurie atrodo „restaurant-level“, bet realiai padaromi namuose.
-          Greiti, šiuolaikiški, su aiškiais žingsniais ir gražiomis nuotraukomis.
-        </p>
-
-        <div class="kpis" aria-label="Statistika">
-          <div class="kpi"><strong id="count">0</strong> receptai</div>
-          <div class="kpi"><strong>Minimal</strong> dizainas</div>
-          <div class="kpi"><strong>1 failas</strong> (HTML+CSS+JS)</div>
+    <article class="recipe">
+      <div class="recipe-hero" style="background-image:url('https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1600&q=70')" role="img" aria-label="Sausainių nuotrauka"></div>
+      <div class="recipe-body">
+        <div class="tags">
+          <span class="tag accent">desertas</span>
+          <span class="tag">šokoladas</span>
+          <span class="tag">chewy</span>
         </div>
-      </div>
 
-      <div class="heroCard featured" aria-label="Dienos receptas">
-        <div class="featuredImg" role="img" aria-label="Dienos recepto nuotrauka"></div>
-        <div class="featuredBody">
-          <span class="badge">✨ Dienos receptas</span>
-          <h3 id="featuredTitle">Citrininė pasta su traškiu česnaku</h3>
-          <p id="featuredText">Ryšku, šviežia, paruošiama per 15–20 min. Idealu, kai norisi “wow” be vargo.</p>
-          <button class="btn" id="openFeatured">Atidaryti receptą →</button>
-        </div>
-      </div>
-    </section>
-
-    <div class="sectionHeader">
-      <h3>Receptai</h3>
-      <p class="hint">Spausk ant kortelės, kad pamatytum ingredientus ir žingsnius.</p>
-    </div>
-
-    <main class="grid" id="grid" aria-label="Receptų sąrašas"></main>
-
-    <footer>
-      <span>© <span id="year"></span> Recipe Studio</span>
-      <span>Nuotraukos: Unsplash (demo)</span>
-    </footer>
-
-  </div>
-
-  <!-- Modal -->
-  <dialog id="modal" aria-label="Recepto langas">
-    <div class="modalTop">
-      <strong>Receptas</strong>
-      <button class="close" id="closeModal" aria-label="Uždaryti">✕</button>
-    </div>
-    <div class="modalGrid">
-      <div class="modalImg" id="modalImg" role="img" aria-label="Recepto nuotrauka"></div>
-      <div class="modalBody">
-        <div class="meta" id="modalTags"></div>
-        <h3 id="modalTitle">—</h3>
-        <p class="sub" id="modalSub">—</p>
+        <h1 class="recipe-title">Chocolate Chip Cookies</h1>
+        <p class="recipe-sub">⏱️ 35 min • ⚡ Lengva • ~10–12 vnt.</p>
 
         <div class="cols">
-          <div class="box">
-            <h5>Ingredientai</h5>
-            <ul id="modalIngredients"></ul>
-          </div>
-          <div class="box">
-            <h5>Gaminimas</h5>
-            <ul class="steps" id="modalSteps"></ul>
-          </div>
+          <section class="box">
+            <h4>Ingredientai</h4>
+            <ul>
+              <li>100 g sviesto (minkšto)</li>
+              <li>120 g rudo cukraus</li>
+              <li>1 kiaušinis</li>
+              <li>160 g miltų</li>
+              <li>½ a.š. kepimo miltelių</li>
+              <li>Žiupsnis druskos</li>
+              <li>100–150 g šokolado gabaliukais</li>
+            </ul>
+          </section>
+
+          <section class="box">
+            <h4>Gaminimas</h4>
+            <ul>
+              <li>Išsuk sviestą su cukrumi, įmaišyk kiaušinį.</li>
+              <li>Sudėk miltus + kepimo miltelius + druską.</li>
+              <li>Įmaišyk šokoladą, suformuok rutuliukus.</li>
+              <li>Kepk 175°C ~10–12 min (neiškepti per daug).</li>
+              <li>Atvėsus taps chewy.</li>
+            </ul>
+          </section>
         </div>
       </div>
-    </div>
-  </dialog>
+    </article>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Recipe Studio</span>
+      <span><a href="../index.html">Visi receptai</a></span>
+    </footer>
+  </div>
 
   <script>
-    const recipes = [
-      {
-        id: "lemon-garlic-pasta",
-        title: "Citrininė pasta su traškiu česnaku",
-        sub: "⏱️ 20 min • 🍋 gaivu • 🌶️ optional",
-        tags: ["pasta", "greita", "vegetariška"],
-        time: "20 min",
-        difficulty: "Lengva",
-        img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=1400&q=70",
-        ingredients: [
-          "Spagečiai (2 porc.)",
-          "1 citrina (žievelė + sultys)",
-          "3–4 česnako skiltelės",
-          "Alyvuogių aliejus",
-          "Tarkuotas kietasis sūris (nebūtina)",
-          "Druska, pipirai, chili dribsniai (nebūtina)"
-        ],
-        steps: [
-          "Išvirk pastą al dente, pasilik ~½ puodelio vandens.",
-          "Plonai supjaustyk česnaką, trumpai apkepk aliejuje iki auksinės spalvos.",
-          "Įmaišyk citrinos žievelę ir sultis, įpilk šlakelį pastos vandens.",
-          "Sudėk pastą, išmaišyk iki blizgaus padažo.",
-          "Pagardink pipirais, druska, chili. Patiekiant – sūris, jei nori."
-        ]
-      },
-      {
-        id: "miso-salmon-bowl",
-        title: "Miso lašišos bowl su agurku ir ryžiais",
-        sub: "⏱️ 25 min • 🥢 azijietiškas • 🧡 sotus",
-        tags: ["žuvys", "bowl", "baltymai"],
-        time: "25 min",
-        difficulty: "Vidutinė",
-        img: "https://images.unsplash.com/photo-1546069901-eacef0df6022?auto=format&fit=crop&w=1400&q=70",
-        ingredients: [
-          "Lašiša (2 filė gab.)",
-          "Ryžiai (jasmin/basmati)",
-          "1 v.š. miso pasta",
-          "1 v.š. sojų padažas",
-          "1 a.š. medus arba cukrus",
-          "Agurkas, sezamas, svogūnų laiškai"
-        ],
-        steps: [
-          "Išvirk ryžius.",
-          "Sumaišyk miso + soją + medų, aptepk lašišą.",
-          "Kepk orkaitėje ~10–12 min (arba keptuvėje).",
-          "Supjaustyk agurką, sudėk viską į dubenį.",
-          "Užbaik sezamu ir laiškais."
-        ]
-      },
-      {
-        id: "choco-tahini-cookies",
-        title: "Šokoladiniai tahini sausainiai (chewy)",
-        sub: "⏱️ 30–35 min • 🍪 desertai • ✨ netikėtas skonis",
-        tags: ["desertas", "sausainiai", "šokoladas"],
-        time: "35 min",
-        difficulty: "Lengva",
-        img: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=1400&q=70",
-        ingredients: [
-          "Tahini (½ puodelio)",
-          "Sviestas (minkštas) arba kokosų aliejus",
-          "Rudas cukrus",
-          "1 kiaušinis",
-          "Miltai, kepimo milteliai",
-          "Juodasis šokoladas gabaliukais",
-          "Žiupsnis druskos"
-        ],
-        steps: [
-          "Išsuk sviestą su cukrumi, įmaišyk tahini ir kiaušinį.",
-          "Sudėk sausus ingredientus, tada šokoladą.",
-          "Suformuok rutuliukus, truputį paspausk.",
-          "Kepk 175°C ~10–12 min (neperkepti!).",
-          "Atvėsink – taps chewy."
-        ]
-      }
-    ];
-
-    const $ = (s) => document.querySelector(s);
-    const grid = $("#grid");
-    const modal = $("#modal");
-
-    const modalImg = $("#modalImg");
-    const modalTitle = $("#modalTitle");
-    const modalSub = $("#modalSub");
-    const modalTags = $("#modalTags");
-    const modalIngredients = $("#modalIngredients");
-    const modalSteps = $("#modalSteps");
-
-    const featuredTitle = $("#featuredTitle");
-    const featuredText = $("#featuredText");
-
-    const year = new Date().getFullYear();
-    $("#year").textContent = year;
-    $("#count").textContent = recipes.length;
-
-    function renderCards(list){
-      grid.innerHTML = "";
-      list.forEach(r => {
-        const card = document.createElement("a");
-        card.className = "card";
-        card.href = "#";
-        card.setAttribute("data-id", r.id);
-        card.setAttribute("aria-label", `Atidaryti receptą: ${r.title}`);
-
-        const img = document.createElement("div");
-        img.className = "cardImg";
-        img.style.backgroundImage = `url("${r.img}")`;
-
-        const body = document.createElement("div");
-        body.className = "cardBody";
-
-        const meta = document.createElement("div");
-        meta.className = "meta";
-        r.tags.slice(0,3).forEach(t => {
-          const tag = document.createElement("span");
-          tag.className = "tag";
-          tag.textContent = t;
-          meta.appendChild(tag);
-        });
-
-        const h = document.createElement("h4");
-        h.textContent = r.title;
-
-        const p = document.createElement("p");
-        p.textContent = r.sub;
-
-        const info = document.createElement("div");
-        info.className = "infoRow";
-        info.innerHTML = `<span>⏱️ ${r.time}</span><span>⚡ ${r.difficulty}</span>`;
-
-        body.append(meta, h, p, info);
-        card.append(img, body);
-
-        card.addEventListener("click", (e) => {
-          e.preventDefault();
-          openRecipe(r.id);
-        });
-
-        grid.appendChild(card);
-      });
-    }
-
-    function openRecipe(id){
-      const r = recipes.find(x => x.id === id);
-      if(!r) return;
-
-      modalImg.style.backgroundImage = `url("${r.img}")`;
-      modalTitle.textContent = r.title;
-      modalSub.textContent = r.sub;
-
-      modalTags.innerHTML = "";
-      r.tags.forEach(t => {
-        const el = document.createElement("span");
-        el.className = "tag";
-        el.textContent = t;
-        modalTags.appendChild(el);
-      });
-
-      modalIngredients.innerHTML = "";
-      r.ingredients.forEach(x => {
-        const li = document.createElement("li");
-        li.textContent = x;
-        modalIngredients.appendChild(li);
-      });
-
-      modalSteps.innerHTML = "";
-      r.steps.forEach((x) => {
-        const li = document.createElement("li");
-        li.textContent = x;
-        modalSteps.appendChild(li);
-      });
-
-      modal.showModal();
-    }
-
-    $("#closeModal").addEventListener("click", () => modal.close());
-    modal.addEventListener("click", (e) => {
-      // click outside content closes
-      const rect = modal.getBoundingClientRect();
-      const inside =
-        e.clientX >= rect.left && e.clientX <= rect.right &&
-        e.clientY >= rect.top && e.clientY <= rect.bottom;
-
-      // dialog click is always inside rect; so close when click target is dialog itself
-      if(e.target === modal) modal.close();
-    });
-
-    // Search
-    $("#search").addEventListener("input", (e) => {
-      const q = e.target.value.trim().toLowerCase();
-      if(!q){ renderCards(recipes); return; }
-      const filtered = recipes.filter(r => {
-        const hay = (r.title + " " + r.sub + " " + r.tags.join(" ")).toLowerCase();
-        return hay.includes(q);
-      });
-      renderCards(filtered);
-    });
-
-    // Shuffle
-    $("#shuffle").addEventListener("click", () => {
-      const r = recipes[Math.floor(Math.random() * recipes.length)];
-      openRecipe(r.id);
-    });
-
-    // Featured opens first recipe (or you can change)
-    const featuredId = recipes[0].id;
-    $("#openFeatured").addEventListener("click", () => openRecipe(featuredId));
-
-    renderCards(recipes);
+    document.querySelector("#year").textContent = new Date().getFullYear();
   </script>
 </body>
 </html>
-
-
-
