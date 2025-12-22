@@ -33,8 +33,6 @@ body {
     font-family: 'Inter', sans-serif;
     color: #333;
 }
-
-/* Hero Section Styling */
 .hero-section {
     height: 60vh;
     background: url('https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1600&q=80') no-repeat center center/cover;
@@ -68,7 +66,6 @@ body {
     font-size: 1.5rem;
 }
 
-/* Navigation Styling */
 .main-nav {
     display: flex;
     justify-content: space-between;
@@ -111,7 +108,7 @@ img{max-width:100%; display:block}
 
 .container{max-width:var(--max); margin:0 auto; padding:26px 18px 70px}
 
-/* Top nav */
+
 .nav{
   display:flex; align-items:center; justify-content:space-between;
   gap:14px;
@@ -316,4 +313,5 @@ li{margin:6px 0; color: rgba(255,255,255,.82)}
   .grid{grid-template-columns:1fr}
   .hero-h1{font-size:32px}
 }
+
 
