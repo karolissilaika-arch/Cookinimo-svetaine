@@ -1,4 +1,3 @@
-// Minimal paieška tik index.html kortelėms
 const yearEl = document.querySelector("#year");
 if (yearEl) yearEl.textContent = new Date().getFullYear();
 
