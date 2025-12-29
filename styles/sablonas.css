@@ -141,6 +141,15 @@ h3 {
     padding-top: 15px;
     color:red;
 }
+.footer{
+  margin-top:26px;
+  color: rgba(255,255,255,.55);
+  font-size:12px;
+  display:flex;
+  justify-content:space-between;
+  gap:12px;
+  padding:14px 6px 0;
+}
 
 @media (max-width: 600px) {
     .recipe-body {
