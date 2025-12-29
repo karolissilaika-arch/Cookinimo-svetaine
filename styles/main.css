@@ -40,7 +40,7 @@ body{
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.3); /* Darkens image slightly to make text pop */
+    background: rgba(0, 0, 0, 0.3);
     padding: 40px;
     width: 100%;
     height: 100%;
@@ -90,7 +90,7 @@ body{
 }
 
 .nav-links a:hover {
-    color: #e67e22; /* A nice culinary orange/brown */
+    color: #e67e22; 
 }
 
 .search-bar input {
@@ -197,6 +197,7 @@ img{max-width:100%; display:block}
   .grid{grid-template-columns:1fr}
   .hero-h1{font-size:32px}
 }
+
 
 
 
