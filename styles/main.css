@@ -186,16 +186,13 @@ img{max-width:100%; display:block}
   padding:14px 6px 0;
 }
 
-/* Responsive */
-@media (max-width: 900px){
-  .hero{grid-template-columns:1fr}
-  .hero-media{border-right:none; border-bottom:1px solid var(--line)}
-  .grid{grid-template-columns: repeat(2, 1fr)}
-  .cols{grid-template-columns:1fr}
-}
-@media (max-width: 560px){
-  .grid{grid-template-columns:1fr}
-  .hero-h1{font-size:32px}
+@media (max-width: 600px) {
+    .recipe-body {
+        grid-template-columns: 1fr;
+    }
+    .content-wrapper {
+        padding: 15px;
+    }
 }
 
 
