@@ -104,25 +104,6 @@ img{max-width:100%; display:block}
 
 .container{max-width:var(--max); margin:0 auto; padding:26px 18px 70px}
 
-
-.row{
-  display:flex; gap:10px; flex-wrap:wrap; align-items:center;
-}
-.btn{
-  display:inline-flex; align-items:center; gap:10px;
-  padding:11px 13px;
-  border-radius: 14px;
-  border:1px solid rgba(255,255,255,.16);
-  background: rgba(255,255,255,.07);
-  transition: .2s ease;
-  font-size:13px;
-}
-.btn:hover{transform: translateY(-1px); background: rgba(255,255,255,.10)}
-.btn.primary{
-  border-color: rgba(255,91,3,.55);
-  background: rgba(255,91,3,.12);
-}
-
 .section{
   margin-top:22px;
 }
@@ -194,6 +175,7 @@ img{max-width:100%; display:block}
         padding: 15px;
     }
 }
+
 
 
 
