@@ -1,10 +1,25 @@
+:root{
+  --yellow:#fff24d;
+  --olive:#47510b;
+  --orange:#ff5b03;
+  --cream:#fdfad8;
+  --lav:#a1aed1;
+
+  --bg:#0b0d12;
+  --panel: rgba(255,255,255,.06);
+  --line: rgba(255,255,255,.12);
+  --text: rgba(0,0,0,.92);
+  --muted: rgba(255,255,255,.70);
+
+  --radius: 18px;
+  --max: 2080px;
+}
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    background-color: #f9f9f9;
+    background:#0b0d12;
+  color:var(--text);
+  font-family: "Manrope", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  line-height:1.5;
+  margin:0;
 }
 
 .content-wrapper {
@@ -27,7 +42,7 @@ body {
 }
 
 .hero-overlay {
-    background: rgba(0, 0, 0, 0.3); /* Darkens image slightly to make text pop */
+    background: rgba(0, 0, 0, 0.3);
     padding: 40px;
     width: 100%;
     height: 100%;
@@ -135,13 +150,13 @@ h3 {
 
 .footer {
   margin-top: 26px;
-  background-color: #333; /* Dark background */
-  color: rgba(255, 255, 255, .8); /* Light text */
+  background-color: #333; 
+  color: rgba(255, 255, 255, .8); 
   font-size: 12px;
   display: flex;
   justify-content: space-between;
   gap: 12px;
-  padding: 20px 10%; /* Increased padding for better look */
+  padding: 20px 10%;
 }
 
 @media (max-width: 600px) {
