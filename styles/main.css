@@ -157,14 +157,15 @@ img{max-width:100%; display:block}
   border-top:1px solid rgba(255,255,255,.10);
 }
 
-.footer{
-  margin-top:26px;
-  color: rgba(255,255,255,.55);
-  font-size:12px;
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  padding:14px 6px 0;
+.footer {
+  margin-top: 26px;
+  background-color: #333;
+  color: rgba(255, 255, 255, .8); 
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 10%; 
 }
 
 @media (max-width: 600px) {
@@ -175,6 +176,7 @@ img{max-width:100%; display:block}
         padding: 15px;
     }
 }
+
 
 
 
