@@ -107,10 +107,6 @@ img{max-width:100%; display:block}
 .section{
   margin-top:22px;
 }
-.section-head{
-  display:flex; justify-content:space-between; align-items:flex-end; gap:12px;
-  margin:0 4px 12px;
-}
 .section-title{
   margin:0;
   font-size:14px;
@@ -176,6 +172,7 @@ img{max-width:100%; display:block}
         padding: 15px;
     }
 }
+
 
 
 
