@@ -133,14 +133,15 @@ h3 {
     color:red;
 }
 
-.footer{
-  margin-top:26px;
-  color: rgba(255,255,255,.55);
-  font-size:12px;
-  display:flex;
-  justify-content:space-between;
-  gap:12px;
-  padding:14px 6px 0;
+.footer {
+  margin-top: 26px;
+  background-color: #333; /* Dark background */
+  color: rgba(255, 255, 255, .8); /* Light text */
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 10%; /* Increased padding for better look */
 }
 
 @media (max-width: 600px) {
