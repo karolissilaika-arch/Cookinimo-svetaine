@@ -1,1 +1,101 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Skonio Mintys</title>
+  <meta name="description" content="Skonio Mintys" />
 
+
+  <link rel="stylesheet" href="styles/main.css" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+
+<body>
+  <div class="container">
+    <header class="site-header">
+    <div class="hero-section">
+        <div class="hero-overlay">
+            <h1>SKONIO MINTYS</h1>
+            <p class="subtitle">Receptai ir kulinarijos blogai</p>
+        </div>
+    </div>
+
+    <nav class="main-nav">
+        <ul class="nav-links">
+            <li><a href="#recipes">RECEPTAI</a></li>
+            <li><a href="#blog">BLOGAS</a></li>
+            <li><a href="#about">APIE</a></li>
+            <li><a href="#contact">KONTAKTAI</a></li>
+        </ul>
+        <div class="search">
+            <input type="text" placeholder="Search recipes...">
+        </div>
+    </nav>
+</header>
+
+    <section class="section" id="recipes">
+
+      <main class="grid" id="grid">
+        <a class="card" href="recipes/khinkaliai.html" data-title="khinkaliai">
+          <div class="card-img" style="background-image:url('khinkaliai.jpg')"></div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag accent">gruziniška</span>
+              <span class="tag">greita</span>
+              <span class="tag">klasika</span>
+            </div>
+            <h3>Khinkaliai su jautienos/kiaulienos įdaru</h3>
+            <p>Paprasti ingridientai, įspūdingas rezultatas</p>
+            <div class="meta">
+              <span>⏱️ 50 min</span>
+              <span>⚡ Lengva</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="recipes/tikka-masala.html" data-title="vistiena azijietiska greita wok">
+          <div class="card-img" style="background-image:url('https://chefbook-prod.s3.us-west-2.amazonaws.com/1766927860073-1a04bd66dc9152')"></div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag accent">indiška</span>
+              <span class="tag">baltymai</span>
+              <span class="tag">sotu</span>
+            </div>
+            <h3>Tikka Masala</h3>
+            <p>Indiškos virtuvės klasika</p>
+            <div class="meta">
+              <span>⏱️ 3 h </span>
+              <span>⚡ Vidutiniškai</span>
+            </div>
+          </div>
+        </a>
+
+        <a class="card" href="recipes/bulves.html" data-title="sausainiai desertas sokoladas">
+          <div class="card-img" style="background-image:url('bulves.jpg')"></div>
+          <div class="card-body">
+            <div class="tags">
+              <span class="tag accent">angliavandeniai</span>
+              <span class="tag">greita</span>
+              <span class="tag">karšto oro gruzdintuvė</span>
+            </div>
+            <h3>Česnakinio sviesto bulvės</h3>
+            <p>Išorėje traškio, o viduje pilnos išsilydžiusio česnakinio sviesto</p>
+            <div class="meta">
+              <span>⏱️ 35 min</span>
+              <span>⚡ Lengva</span>
+          </div>
+          </div>
+        </a>
+      </main>
+    </section>
+
+    <footer class="footer">
+      <span>© <span id="year"></span> Skonio Mintys</span>
+      <span> nuotraukos: Unsplash</span>
+    </footer>
+  </div>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>
