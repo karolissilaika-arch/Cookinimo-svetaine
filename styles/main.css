@@ -118,7 +118,7 @@ img{max-width:100%; display:block}
 
 
 
-.grid{
+.recipe-container{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
   gap:14px;
@@ -172,6 +172,7 @@ img{max-width:100%; display:block}
         padding: 15px;
     }
 }
+
 
 
 
