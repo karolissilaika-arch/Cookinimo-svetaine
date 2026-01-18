@@ -1,11 +1,9 @@
-// 1. Your recipe data
 const recipes = [
     { title: "Tikka masala", ingredients: ["vištiena", "kokosų pienas", "svogūnai"], link: "recipes/tikka-masala.html",laikas:"3 h",sudetingumas:"Vidutiniškai", img:"https://chefbook-prod.s3.us-west-2.amazonaws.com/1766927860073-1a04bd66dc9152"},
     { title: "Česnakinio sviesto bulvės", ingredients: ["bulvės", "sviestas", "česnakas"], link: "recipes/bulves.html",laikas:"1 h",sudetingumas:"Lengvai", img:"bulves.jpg"}, 
     { title: "Khinkaliai", ingredients: ["faršas", "miltai", "kaiušinis"], link: "recipes/khinkaliai.html",laikas:"2 h",sudetingumas:"Vidutiniškai", img:"khinkaliai.jpg"},
 ];
 
-// 2. Function to display recipes
 function displayRecipes(recipeArray) {
     const container = document.getElementById('recipeList');
     container.innerHTML = ""; // Clear current list
@@ -30,8 +28,6 @@ function displayRecipes(recipeArray) {
         </a>`;
     });
 }
-
-// 3. The Search Logic
 function filterRecipes() {
     const searchTerm = document.getElementById('recipeSearch').value.toLowerCase();
     
@@ -42,6 +38,4 @@ function filterRecipes() {
 
     displayRecipes(filtered);
 }
-
-// Initialize the page with all recipes
 displayRecipes(recipes);
