@@ -149,7 +149,12 @@ img{max-width:100%; display:block}
   padding-top:10px;
   border-top:1px solid rgba(255,255,255,.10);
 }
-
+.recipe-container a.card {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  height: 100%; /* Ensures all cards in a row are the same height */
+}
 .footer {
   margin-top: 26px;
   background-color: #333;
@@ -161,14 +166,15 @@ img{max-width:100%; display:block}
   padding: 20px 10%; 
 }
 
-@media (max-width: 600px) {
-    .recipe-body {
+@media (max-width: 768px) {
+    .recipe-container {
         grid-template-columns: 1fr;
     }
     .content-wrapper {
         padding: 15px;
     }
 }
+
 
 
 
