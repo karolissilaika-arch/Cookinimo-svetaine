@@ -19,18 +19,28 @@
         </div>
     </div>
 
-    <nav class="main-nav">
+   <nav class="main-nav">
+    <div class="nav-header">
+        <button class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </div>
+
+    <div class="nav-content" id="nav-content">
         <ul class="nav-links">
             <li><a href="visi_receptai.html">RECEPTAI</a></li>
             <li><a href="#blog">BLOGAS</a></li>
             <li><a href="#about">APIE</a></li>
             <li><a href="#contact">KONTAKTAI</a></li>
         </ul>
-       <div class="search">
-    <i class="search-icon">🔍</i>
-    <input type="text" id="recipeSearch" oninput="filterRecipes()" placeholder="Ieškoti receptų...">
-</div>
-    </nav>
+        <div class="search">
+            <i class="search-icon">🔍</i>
+            <input type="text" id="recipeSearch" oninput="filterRecipes()" placeholder="Ieškoti...">
+        </div>
+    </div>
+</nav>
 </header>
   
     <section id="recipeList" class="recipe-container">
