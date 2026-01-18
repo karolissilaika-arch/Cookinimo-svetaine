@@ -39,3 +39,16 @@ function filterRecipes() {
     displayRecipes(filtered);
 }
 displayRecipes(recipes);
+const menuToggle = document.getElementById('mobile-menu');
+const navContent = document.getElementById('nav-content');
+
+menuToggle.addEventListener('click', () => {
+    navContent.classList.toggle('active');
+});
+
+// Close menu when a link is clicked (Optional but recommended)
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        navContent.classList.remove('active');
+    });
+});
