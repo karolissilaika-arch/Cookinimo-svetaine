@@ -53,7 +53,7 @@ body{
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     letter-spacing: 4px;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
 }
 
 .subtitle {
@@ -291,6 +291,7 @@ img{max-width:100%; display:block}
         background-position: 70% center; 
     }
 }
+
 
 
 
