@@ -20,8 +20,8 @@
             <p class="subtitle">Receptai ir kulinarijos blogai</p>
         </div>
     </div>
-
-    <nav class="main-nav">
+<nav>
+   <div class="nav-content" id="nav-content">
         <ul class="nav-links">
             <li><a href="visi_receptai.html">RECEPTAI</a></li>
             <li><a href="#blog">BLOGAS</a></li>
@@ -29,9 +29,11 @@
             <li><a href="#contact">KONTAKTAI</a></li>
         </ul>
         <div class="search">
-            <input type="text" placeholder="Search recipes...">
+            <i class="search-icon">🔍</i>
+            <input type="text" id="recipeSearch" oninput="filterRecipes()" placeholder="Ieškoti...">
         </div>
-    </nav>
+    </div>
+</nav>
 </header>
 
     <section class="section" id="recipes">
