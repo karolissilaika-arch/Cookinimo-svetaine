@@ -71,7 +71,7 @@ body{
     border-bottom: 1px solid #eee;
     position: sticky;
     top: 0;
-    z-index: 1000
+    z-index: 1000;
     background: rgba(255, 255, 255, 0.8); 
     backdrop-filter: blur(10px); 
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
@@ -291,6 +291,7 @@ img{max-width:100%; display:block}
         background-position: 70% center; 
     }
 }
+
 
 
 
