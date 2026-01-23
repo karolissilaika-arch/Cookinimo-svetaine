@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Khinkaliai | Skonio Mintys</title>
+  <link rel="stylesheet" href="../styles/sablonas.css" />
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="site-header no-print">
+      <nav class="main-nav">
+        <div class="nav-logo"><a href="../index.html">SKONIO<span>MINTYS</span></a></div>
+        <div class="nav-content">
+          <ul class="nav-links">
+            <li><a href="../index.html">PAGRINDINIS</a></li>
+            <li><a href="../visi_receptai.html">RECEPTAI</a></li>
+            <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
+          </ul>
+          <div class="search">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
+            <div id="searchResults" class="search-results-dropdown"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article class="recipe-paper">
+        <div class="recipe-header">
+          <span class="tag">Gruziniška virtuvė</span>
+          <h1>Khinkaliai su jautienos ir kiaulienos įdaru</h1>
+          <div class="recipe-meta">
+            <span>⏱️ 50 min.</span>
+            <span>🥟 <span id="yield-count">12</span> vnt.</span>
+            <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
+          </div>
+        </div>
+
+        <div class="recipe-hero-img" style="background-image: url('../khinkaliai.jpg')"></div>
+
+        <div class="recipe-grid-classic">
+          <section class="ingredients-section">
+            <h2>Ingredientai</h2>
+            <div class="interactive-controls no-print">
+                <input type="number" id="servings" value="12" min="1">
+                <select id="unitToggle">
+                    <option value="metric">Metrinė (g/ml)</option>
+                    <option value="imperial">JAV (oz/lb)</option>
+                </select>
+                <button id="resetRecipe">Atstatyti</button>
+            </div>
+            <ul id="ingredient-list" class="ing-list"></ul>
+          </section>
+
+          <section class="instructions-section">
+            <h2>Gaminimo eiga</h2>
+            <div class="steps-list">
+              <div class="step"><strong>1.</strong> 150 ml vandens sumaišykite su druska, kiaušiniu ir miltais. Minkykite, kol tešla taps vientisa.</div>
+              <div class="step"><strong>2.</strong> Suvyniokite tešlą į plėvelę ir palikite šaldytuve 20 min.</div>
+              <div class="step"><strong>3.</strong> Įdarui sumaišykite mėsą, tarkuotus svogūnus, česnaką, prieskonius ir 100 ml vandens (sultingumui).</div>
+              <div class="step"><strong>4.</strong> Tešlą supjaustykite į 12 dalių ir kiekvieną plonai iškočiokite.</div>
+              <div class="step"><strong>5.</strong> Dėkite po šaukštą mėsos ir lankstykite kraštus į centrą, kol "maišelis" užsidarys.</div>
+              <div class="step"><strong>6.</strong> Virkite pasūdytame vandenyje 12–15 min. Patiekite gausiai pabarstę pipirais.</div>
+            </div>
+          </section>
+        </div>
+
+        <section class="notes-section">
+          <h2>Mano pastabos</h2>
+          <div id="kitchen-notes" class="notes-box" contenteditable="true"></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer no-print">
+      <span>© 2026 Skonio Mintys</span>
+    </footer>
+  </div>
+
+  <script src="../scripts/khinkaliai.js"></script>
+
+  <div id="contactModal" class="modal no-print">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Susisiekite</h2>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <input type="text" placeholder="Vardas" required>
+        <input type="email" placeholder="El. paštas" required>
+        <textarea placeholder="Žinutė..." rows="4" required></textarea>
+        <button type="submit" class="print-btn" style="width: 100%">Siųsti žinutę</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

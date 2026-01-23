@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="lt">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Tikka Masala | Skonio Mintys</title>
+  <link rel="stylesheet" href="../styles/sablonas.css" />
+</head>
+<body>
+  <div class="container-fluid">
+    <header class="site-header no-print">
+      <nav class="main-nav">
+        <div class="nav-logo"><a href="../index.html">SKONIO<span>MINTYS</span></a></div>
+        <div class="nav-content">
+          <ul class="nav-links">
+            <li><a href="../index.html">PAGRINDINIS</a></li>
+            <li><a href="../visi_receptai.html">RECEPTAI</a></li>
+            <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
+          </ul>
+          <div class="search">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
+            <div id="searchResults" class="search-results-dropdown"></div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container">
+      <article class="recipe-paper">
+        <div class="recipe-header">
+          <span class="tag">Pasaulio skoniai</span>
+          <h1>Chicken Tikka Masala</h1>
+          <div class="recipe-meta">
+            <span>⏱️ 3 val.</span>
+            <span>🥣 <span id="yield-count">8</span> porcijos</span>
+            <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
+          </div>
+        </div>
+
+        <div class="recipe-hero-img" style="background-image: url('https://chefbook-prod.s3.us-west-2.amazonaws.com/1766927860073-1a04bd66dc9152')"></div>
+
+        <div class="recipe-grid-classic">
+          <section class="ingredients-section">
+            <h2>Ingredientai</h2>
+            <div class="interactive-controls no-print">
+                <input type="number" id="servings" value="8" min="1">
+                <select id="unitToggle">
+                    <option value="metric">Metrinė (g/ml)</option>
+                    <option value="imperial">Imperial (oz/cups)</option>
+                </select>
+                <button id="resetRecipe">Atstatyti</button>
+            </div>
+            <ul id="ingredient-list" class="ing-list"></ul>
+          </section>
+
+          <section class="instructions-section">
+            <h2>Gaminimo eiga</h2>
+            <div class="steps-list">
+              <div class="step"><strong>1.</strong> Vištieną supjaustykite smulkiais gabaliukais (2x2 cm).</div>
+              <div class="step"><strong>2.</strong> Sumaišykite vištieną su jogurtu ir dalimi prieskonių. Marinuokite šaldytuve 2 valandas.</div>
+              <div class="step"><strong>3.</strong> Pakepinkite smulkintą svogūną ir česnaką dideliame puode. Sudėkite likusius prieskonius.</div>
+              <div class="step"><strong>4.</strong> Įmaišykite pomidorų pastą, pakepinkite, tada supilkite konservuotus pomidorus.</div>
+              <div class="step"><strong>5.</strong> Padažą sutrinkite trintuvu iki vientisos masės, pasūdykite.</div>
+              <div class="step"><strong>6.</strong> Apkepkite vištieną keptuvėje, kol apskrus, ir sudėkite į padažą.</div>
+              <div class="step"><strong>7.</strong> Troškinkite 30 min. ant mažos ugnies, tada supilkite kokosų pieną.</div>
+              <div class="step"><strong>8.</strong> Nuimkite nuo ugnies, įmaišykite sviestą. Patiekite su ryžiais ir kalendra.</div>
+            </div>
+          </section>
+        </div>
+
+        <section class="notes-section">
+          <h2>Mano pastabos</h2>
+          <div id="kitchen-notes" class="notes-box" contenteditable="true"></div>
+        </section>
+      </article>
+    </main>
+
+    <footer class="footer no-print">
+      <span>© 2026 Skonio Mintys</span>
+    </footer>
+  </div>
+
+  <script src="../scripts/tikka-masala.js"></script>
+  
+  <div id="contactModal" class="modal no-print">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Susisiekite</h2>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <input type="text" placeholder="Vardas" required>
+        <input type="email" placeholder="El. paštas" required>
+        <textarea placeholder="Žinutė..." rows="4" required></textarea>
+        <button type="submit" class="print-btn" style="width: 100%">Siųsti žinutę</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>
