@@ -3,53 +3,74 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Skonio Mintys</title>
-  <meta name="description" content="Skonio Mintys" />
-  <link rel="stylesheet" href="styles/main.css" />
+  <title>Visi Receptai | Skonio Mintys</title>
+  <link rel="stylesheet" href="styles/visi_receptai.css" />
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
-  <div class="container">
+  <div class="container-fluid">
     <header class="site-header">
-    <div class="hero-section">
+      <div class="hero-section">
         <div class="hero-overlay">
-            <h1>SKONIO MINTYS</h1>
-            <p class="subtitle">Receptai ir kulinarijos blogai</p>
+          <h1>SKONIO MINTYS</h1>
+          <p class="subtitle">Atraskite naujus skonius kasdien</p>
         </div>
-    </div>
+      </div>
 
-   <nav class="main-nav">
-    <div class="nav-header">
+      <nav class="main-nav">
+        <div class="nav-logo">
+          <a href="index.html">SKONIO<span>MINTYS</span></a>
+        </div>
+
         <button class="menu-toggle" id="mobile-menu">
-            <span></span>
-            <span></span>
-            <span></span>
+          <span></span><span></span><span></span>
         </button>
-    </div>
 
-    <div class="nav-content" id="nav-content">
-        <ul class="nav-links">
+        <div class="nav-content" id="nav-content">
+          <ul class="nav-links">
+            <li><a href="index.html">PAGRINDINIS</a></li>
             <li><a href="visi_receptai.html">RECEPTAI</a></li>
-            <li><a href="#blog">BLOGAS</a></li>
-            <li><a href="#about">APIE</a></li>
-            <li><a href="#contact">KONTAKTAI</a></li>
-        </ul>
-        <div class="search">
-            <i class="search-icon">🔍</i>
-            <input type="text" id="recipeSearch" oninput="filterRecipes()" placeholder="Ieškoti...">
+            <li><a href="#contact" onclick="openModal('contactModal')">KONTAKTAI</a></li>
+          </ul>
+          <div class="search">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="recipeSearch" oninput="showDropdownOnly()" placeholder="Ieškoti..." autocomplete="off">
+            <div id="searchResults" class="search-results-dropdown"></div>
+          </div>
         </div>
-    </div>
-</nav>
-</header>
-  
-    <section id="recipeList" class="recipe-container">
-    </section>
+      </nav>
+    </header>
+
+    <main class="container">
+      <div class="filter-wrapper">
+        <button class="filter-btn active" onclick="filterByCategory('Visi')">Visi</button>
+        <button class="filter-btn" onclick="filterByCategory('Indiška')">Indiška</button>
+        <button class="filter-btn" onclick="filterByCategory('Sakartvelo')">Sakartvelo</button>
+        <button class="filter-btn" onclick="filterByCategory('Garnyras')">Garnyras</button>
+        <button class="filter-btn" onclick="showOnlyFavorites()">Mano Mėgstami ❤</button>
+      </div>
+
+      <div id="recipeList" class="recipe-container"></div>
+    </main>
 
     <footer class="footer">
-      <span>© <span id="year"></span> 2026 Skonio Mintys</span>
-      <span> nuotraukos: Unsplash</span>
+      <span>© 2026 Skonio Mintys</span>
+      <span>nuotraukos: Unsplash</span>
     </footer>
+  </div>
+
+  <div id="contactModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeModal('contactModal')">&times;</span>
+      <h2>Susisiekite su mumis</h2>
+      <form class="contact-form" onsubmit="handleContact(event)">
+        <input type="text" placeholder="Jūsų vardas" required>
+        <input type="email" placeholder="El. pašto adresas" required>
+        <textarea placeholder="Jūsų žinutė..." rows="5" required></textarea>
+        <button type="submit" class="filter-btn active" style="width: 100%;">Siųsti žinutę</button>
+      </form>
+    </div>
   </div>
 
   <script src="scripts/main.js"></script>
