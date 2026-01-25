@@ -12,15 +12,15 @@ const recipes = [
         ingredients: ["bulvės", "sviestas", "česnakas"], 
         link: "recipes/bulves.html",
         laikas: "1 h", sudetingumas: "Lengvai", 
-        img: "https://images.unsplash.com/photo-1518977676601-b53f02ac6d31?auto=format&fit=crop&w=800&q=80",
+        img: "../bulves.jpg",
         category: "Garnyras", desc: "Traškios bulvytės su česnakiniu sviestu."
     }, 
     { 
         title: "Khinkaliai", 
-        ingredients: ["faršas", "miltai", "kaiušinis"], 
+        ingredients: ["faršas", "miltai", "kiaušinis"], 
         link: "recipes/khinkaliai.html",
         laikas: "2 h", sudetingumas: "Vidutiniškai", 
-        img: "https://images.unsplash.com/photo-1626128665085-483747621778?auto=format&fit=crop&w=800&q=80",
+        img: "../khinkaliai.jpg",
         category: "Sakartvelo", desc: "Sultingi tradiciniai koldūnai."
     }
 ];
@@ -162,4 +162,5 @@ window.onclick = function(event) {
 // Mobile menu toggle
 document.getElementById('mobile-menu').onclick = () => {
     document.getElementById('nav-content').classList.toggle('active');
+
 };
