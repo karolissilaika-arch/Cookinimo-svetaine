@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Česnakinio sviesto bulvės | Skonio Mintys</title>
+  <title>Naminis Ramen | Skonio Mintys</title>
   <link rel="stylesheet" href="../styles/sablonas.css" />
 </head>
 <body>
@@ -18,32 +18,32 @@
             <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
           </ul>
           <div class="search">
-            <input type="text" id="recipeSearch" oninput="showDropdownOnly()" placeholder="Ieškoti...">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
             <div id="searchResults" class="search-results-dropdown"></div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container" data-recipe-id="bulves">
+    <main class="container" data-recipe-id="ramen">
       <article class="recipe-paper">
         <div class="recipe-header">
-          <span class="tag">Lietuviška klasika</span>
-          <h1>Česnakinio sviesto bulvės</h1>
+          <span class="tag">Azijos skoniai</span>
+          <h1>Naminis Shoyu Ramen</h1>
           <div class="recipe-meta">
-            <span>⏱️ 35 min.</span>
-            <span>🥔 <span id="yield-count">6</span> puselės</span>
+            <span>⏱️ 45 min.</span>
+            <span>🍜 <span id="yield-count">1</span> porcija</span>
             <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
           </div>
         </div>
 
-        <div class="recipe-hero-img" style="background-image: url('../bulvės.jpg')"></div>
+        <div class="recipe-hero-img" style="background-image: url('../ramen.jpg')"></div>
 
         <div class="recipe-grid-classic">
           <section class="ingredients-section">
             <h2>Ingredientai</h2>
             <div class="interactive-controls no-print">
-                <input type="number" id="servings" value="6" min="1">
+                <input type="number" id="servings" value="1" min="1">
                 <select id="unitToggle">
                     <option value="metric">Gramai (g)</option>
                     <option value="imperial">Vienetai</option>
@@ -56,12 +56,14 @@
           <section class="instructions-section">
             <h2>Gaminimo eiga</h2>
             <div class="steps-list">
-              <div class="step"><strong>1.</strong> Nuskuskite bulves ir perpjaukite perpus išilgai.</div>
-              <div class="step"><strong>2.</strong> Dubenyje sumaišykite bulves su druska, pipirais, paprikos milteliais ir aliejumi.</div>
-              <div class="step"><strong>3.</strong> Įdėkite bulves į karšto oro gruzdintuvę (arba orkaitę) 30 min. 200°C temperatūroje. Įpusėjus – apverskite.</div>
-              <div class="step"><strong>4.</strong> Kol bulvės kepa, sutarkuokite česnaką ir sumaišykite su sviestu.</div>
-              <div class="step"><strong>5.</strong> Iškepusias bulves įpjaukite per vidurį ir įdėkite česnakinio sviesto masę.</div>
-              <div class="step"><strong>6.</strong> Pagardinkite smulkinta petražole ir mėgaukitės.</div>
+              <div class="step"><strong>1.</strong> Puode su aliejumi sudėkite svogūną česnaką ir imbierą. Leiskite aromatizuotis ir užpilkite sultiniu.</div>
+                <div class="step"><strong>2.</strong> Sudėkite 50 ml sojos padažo ir virkite apie 15 min.</div>
+                <div class="step"><strong>3.</strong> Vištieną iškepkite keptuvėje arba orkaitėje kol ji bus lengvai plėšoma</div>
+                <div class="step"><strong>4.</strong> Atskiram puode užvirkite 50 ml sojos su 50 ml vandens ir 50 gramų cukraus. Puodelyje sumaišykite šaukšta krakmolo su trupučiu vandens kol krakmolas ištirpsta ir pilkite į puodą po biški kol padažas sutirštėja</div>
+                <div class="step"><strong>5.</strong> Suplėšikyte vištieną ir užpilkite padažu.</div>
+              <div class="step"><strong>6.</strong> Atskirai išvirkite Ramen makaronus pagal pakuotės nurodymus.</div>
+              <div class="step"><strong>7.</strong> Paruoškite priedus: perpjaukite virtą kiaušinį, susmulkinkite svogūnų laiškus.</div>
+              <div class="step"><strong>8.</strong> Į dubenį dėkite makaronus, užpilkite karštu sultiniu ir išdėliokite vištieną su kiaušiniu ant viršaus.</div>
             </div>
           </section>
         </div>

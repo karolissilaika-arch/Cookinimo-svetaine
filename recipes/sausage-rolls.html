@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Česnakinio sviesto bulvės | Skonio Mintys</title>
+  <title>Dešrelės tešloje | Skonio Mintys</title>
   <link rel="stylesheet" href="../styles/sablonas.css" />
 </head>
 <body>
@@ -18,32 +18,32 @@
             <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
           </ul>
           <div class="search">
-            <input type="text" id="recipeSearch" oninput="showDropdownOnly()" placeholder="Ieškoti...">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
             <div id="searchResults" class="search-results-dropdown"></div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container" data-recipe-id="bulves">
+    <main class="container" data-recipe-id="sausage-rolls">
       <article class="recipe-paper">
         <div class="recipe-header">
-          <span class="tag">Lietuviška klasika</span>
-          <h1>Česnakinio sviesto bulvės</h1>
+          <span class="tag">Užkandžiai</span>
+          <h1>Traškios dešrelės tešloje</h1>
           <div class="recipe-meta">
-            <span>⏱️ 35 min.</span>
-            <span>🥔 <span id="yield-count">6</span> puselės</span>
+            <span>⏱️ 30 min.</span>
+            <span>🥐 <span id="yield-count">4</span> porcijos</span>
             <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
           </div>
         </div>
 
-        <div class="recipe-hero-img" style="background-image: url('../bulvės.jpg')"></div>
+        <div class="recipe-hero-img" style="background-image: url('../sausage-rolls.jpg')"></div>
 
         <div class="recipe-grid-classic">
           <section class="ingredients-section">
             <h2>Ingredientai</h2>
             <div class="interactive-controls no-print">
-                <input type="number" id="servings" value="6" min="1">
+                <input type="number" id="servings" value="4" min="1">
                 <select id="unitToggle">
                     <option value="metric">Gramai (g)</option>
                     <option value="imperial">Vienetai</option>
@@ -56,12 +56,12 @@
           <section class="instructions-section">
             <h2>Gaminimo eiga</h2>
             <div class="steps-list">
-              <div class="step"><strong>1.</strong> Nuskuskite bulves ir perpjaukite perpus išilgai.</div>
-              <div class="step"><strong>2.</strong> Dubenyje sumaišykite bulves su druska, pipirais, paprikos milteliais ir aliejumi.</div>
-              <div class="step"><strong>3.</strong> Įdėkite bulves į karšto oro gruzdintuvę (arba orkaitę) 30 min. 200°C temperatūroje. Įpusėjus – apverskite.</div>
-              <div class="step"><strong>4.</strong> Kol bulvės kepa, sutarkuokite česnaką ir sumaišykite su sviestu.</div>
-              <div class="step"><strong>5.</strong> Iškepusias bulves įpjaukite per vidurį ir įdėkite česnakinio sviesto masę.</div>
-              <div class="step"><strong>6.</strong> Pagardinkite smulkinta petražole ir mėgaukitės.</div>
+              <div class="step"><strong>1.</strong> Atšildykite sluoksniuotą tešlą ir supjaustykite ją stačiakampiais.</div>
+              <div class="step"><strong>2.</strong> Faršą sumaišykite su kiaušiniu, druska, pipirais ir petražolėmis</div>
+              <div class="step"><strong>3.</strong> Ant kiekvieno tešlos stačiakampio suformuokite 2 cm skersmens "dešrelę" iš padarytos mėsos masės.</div>
+              <div class="step"><strong>4.</strong> Aptepkite viršų kiaušinio plakiniu ir, jei norite, pabarstykite sezamais ar kmynais.</div>
+              <div class="step"><strong>5.</strong> Kepkite 200°C temperatūroje apie 20 min., kol tešla taps auksinė ir traški.</div>
+              <div class="step"><strong>6.</strong> Patiekite šiltas, puikiai tinka su garstyčiomis ar marinaros padažu.</div>
             </div>
           </section>
         </div>

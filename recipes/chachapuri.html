@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Česnakinio sviesto bulvės | Skonio Mintys</title>
+  <title>Chačapuri | Skonio Mintys</title>
   <link rel="stylesheet" href="../styles/sablonas.css" />
 </head>
 <body>
@@ -18,32 +18,32 @@
             <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
           </ul>
           <div class="search">
-            <input type="text" id="recipeSearch" oninput="showDropdownOnly()" placeholder="Ieškoti...">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
             <div id="searchResults" class="search-results-dropdown"></div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container" data-recipe-id="bulves">
+    <main class="container" data-recipe-id="chachapuri">
       <article class="recipe-paper">
         <div class="recipe-header">
-          <span class="tag">Lietuviška klasika</span>
-          <h1>Česnakinio sviesto bulvės</h1>
+          <span class="tag">Sakartvelo virtuvė</span>
+          <h1>Adžarijos Chačapuri</h1>
           <div class="recipe-meta">
-            <span>⏱️ 35 min.</span>
-            <span>🥔 <span id="yield-count">6</span> puselės</span>
+            <span>⏱️ 40 min.</span>
+            <span>🧀 <span id="yield-count">1</span> laivelis</span>
             <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
           </div>
         </div>
 
-        <div class="recipe-hero-img" style="background-image: url('../bulvės.jpg')"></div>
+        <div class="recipe-hero-img" style="background-image: url('../chachapuri.jpg')"></div>
 
         <div class="recipe-grid-classic">
           <section class="ingredients-section">
             <h2>Ingredientai</h2>
             <div class="interactive-controls no-print">
-                <input type="number" id="servings" value="6" min="1">
+                <input type="number" id="servings" value="1" min="1">
                 <select id="unitToggle">
                     <option value="metric">Gramai (g)</option>
                     <option value="imperial">Vienetai</option>
@@ -56,12 +56,12 @@
           <section class="instructions-section">
             <h2>Gaminimo eiga</h2>
             <div class="steps-list">
-              <div class="step"><strong>1.</strong> Nuskuskite bulves ir perpjaukite perpus išilgai.</div>
-              <div class="step"><strong>2.</strong> Dubenyje sumaišykite bulves su druska, pipirais, paprikos milteliais ir aliejumi.</div>
-              <div class="step"><strong>3.</strong> Įdėkite bulves į karšto oro gruzdintuvę (arba orkaitę) 30 min. 200°C temperatūroje. Įpusėjus – apverskite.</div>
-              <div class="step"><strong>4.</strong> Kol bulvės kepa, sutarkuokite česnaką ir sumaišykite su sviestu.</div>
-              <div class="step"><strong>5.</strong> Iškepusias bulves įpjaukite per vidurį ir įdėkite česnakinio sviesto masę.</div>
-              <div class="step"><strong>6.</strong> Pagardinkite smulkinta petražole ir mėgaukitės.</div>
+              <div class="step"><strong>1.</strong> Paruoškite tešlą: sumaišykite šiltą vandenį, mieles ir cukrų. Palikite 10 min., kol mielės suputos. Tada įpilkite aliejų, druską ir miltus. Minkykite, kol tešla taps elastinga. Uždenkite ir palikite kilti apie 1 valandą.</div>
+              <div class="step"><strong>2.</strong> Paruoškite sūrio įdarą: sumaišykite tarkuotą mozzarelą su feta.</div>
+              <div class="step"><strong>3.</strong> Iškočiokite tešlą į ovalo formos paplotį.</div>
+              <div class="step"><strong>4.</strong> Ant iškočiotos tešlos vidurio sudėkite sūrio mišinį. tešlos kraštus sujunkite išilgai, tešlą apverskite ir perpjaukite jos vidury, kad tešla atrodytu tarsi valtis.</div>
+              <div class="step"><strong>5.</strong> Kepkite 220°C orkaitėje apie 15 min.</div>
+              <div class="step"><strong>6.</strong> Įmuškite kiaušinio trynį į vidurį ir įdėkite sviesto gabalėlį prieš patiekiant.</div>
             </div>
           </section>
         </div>
@@ -79,18 +79,5 @@
   </div>
 
   <script src="../scripts/receptai.js"></script>
-  
-  <div id="contactModal" class="modal no-print">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('contactModal')">&times;</span>
-      <h2>Susisiekite</h2>
-      <form class="contact-form" onsubmit="handleContact(event)">
-        <input type="text" placeholder="Vardas" required>
-        <input type="email" placeholder="El. paštas" required>
-        <textarea placeholder="Žinutė..." rows="4" required></textarea>
-        <button type="submit" class="print-btn" style="width: 100%">Siųsti žinutę</button>
-      </form>
-    </div>
-  </div>
 </body>
 </html>

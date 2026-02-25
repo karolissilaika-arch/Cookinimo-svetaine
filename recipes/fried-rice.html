@@ -3,9 +3,17 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Česnakinio sviesto bulvės | Skonio Mintys</title>
+  <meta name="google-adsense-account" content="ca-pub-5404880047208445">
+  <title>Kepti ryžiai (Fried Rice) | Skonio Mintys</title>
   <link rel="stylesheet" href="../styles/sablonas.css" />
 </head>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-41XD32V6S0"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-41XD32V6S0');
+</script>
 <body>
   <div class="container-fluid">
     <header class="site-header no-print">
@@ -18,50 +26,52 @@
             <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
           </ul>
           <div class="search">
-            <input type="text" id="recipeSearch" oninput="showDropdownOnly()" placeholder="Ieškoti...">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
             <div id="searchResults" class="search-results-dropdown"></div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container" data-recipe-id="bulves">
+   <main class="container" data-recipe-id="fried-rice">
       <article class="recipe-paper">
         <div class="recipe-header">
-          <span class="tag">Lietuviška klasika</span>
-          <h1>Česnakinio sviesto bulvės</h1>
+          <span class="tag">Greita vakarienė</span>
+          <h1>Kepti ryžiai (Fried Rice)</h1>
           <div class="recipe-meta">
-            <span>⏱️ 35 min.</span>
-            <span>🥔 <span id="yield-count">6</span> puselės</span>
+            <span>⏱️ 15 min.</span>
+            <span>🥡 <span id="yield-count">2</span> porcijos</span>
             <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
           </div>
         </div>
 
-        <div class="recipe-hero-img" style="background-image: url('../bulvės.jpg')"></div>
+        <div class="recipe-hero-img" style="background-image: url('../fried-rice.jpg')"></div>
 
         <div class="recipe-grid-classic">
           <section class="ingredients-section">
             <h2>Ingredientai</h2>
             <div class="interactive-controls no-print">
-                <input type="number" id="servings" value="6" min="1">
+                <input type="number" id="servings" value="2" min="1">
                 <select id="unitToggle">
                     <option value="metric">Gramai (g)</option>
                     <option value="imperial">Vienetai</option>
                 </select>
                 <button id="resetRecipe">Atstatyti</button>
             </div>
-            <ul id="ingredient-list" class="ing-list"></ul>
+            <ul id="ingredient-list" class="ing-list">
+                </ul>
           </section>
 
           <section class="instructions-section">
             <h2>Gaminimo eiga</h2>
             <div class="steps-list">
-              <div class="step"><strong>1.</strong> Nuskuskite bulves ir perpjaukite perpus išilgai.</div>
-              <div class="step"><strong>2.</strong> Dubenyje sumaišykite bulves su druska, pipirais, paprikos milteliais ir aliejumi.</div>
-              <div class="step"><strong>3.</strong> Įdėkite bulves į karšto oro gruzdintuvę (arba orkaitę) 30 min. 200°C temperatūroje. Įpusėjus – apverskite.</div>
-              <div class="step"><strong>4.</strong> Kol bulvės kepa, sutarkuokite česnaką ir sumaišykite su sviestu.</div>
-              <div class="step"><strong>5.</strong> Iškepusias bulves įpjaukite per vidurį ir įdėkite česnakinio sviesto masę.</div>
-              <div class="step"><strong>6.</strong> Pagardinkite smulkinta petražole ir mėgaukitės.</div>
+              <div class="step"><strong>1.</strong> Supjaustykite svoguną ir česnakus kuo smulkiau</div>
+              <div class="step"><strong>2.</strong> Dubenyje sumaišykite sojos padažą, cukrų ir austrių padažą</div>
+              <div class="step"><strong>3.</strong> Įkaitinkite keptuvę su šlakeliu aliejaus ir iškepkite kiaušinius, juos susmulkindami mentelė. Išimkite iš keptuvės.</div>
+              <div class="step"><strong>4.</strong> Toje pačioje keptuvėje apkepkite česnaką bei svogūną.</div>
+              <div class="step"><strong>5.</strong> Suberkite šaltus ryžius, maišykite ir kepkite ant stiprios ugnies 3-5 min.</div>
+              <div class="step"><strong>6.</strong> Supilkite padažą, grąžinkite kiaušinius ir apšlakstykite sezamų aliejumi.</div>
+              <div class="step"><strong>7.</strong> Papuoškite svogūnų laiškais ir patiekite.</div>
             </div>
           </section>
         </div>

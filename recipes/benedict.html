@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Česnakinio sviesto bulvės | Skonio Mintys</title>
+  <title>Benedikto kiaušiniai | Skonio Mintys</title>
   <link rel="stylesheet" href="../styles/sablonas.css" />
 </head>
 <body>
@@ -18,32 +18,32 @@
             <li><a href="#" class="no-print" onclick="openModal('contactModal')">KONTAKTAI</a></li>
           </ul>
           <div class="search">
-            <input type="text" id="recipeSearch" oninput="showDropdownOnly()" placeholder="Ieškoti...">
+            <input type="text" id="recipeSearch" oninput="showLiveResults()" placeholder="Ieškoti...">
             <div id="searchResults" class="search-results-dropdown"></div>
           </div>
         </div>
       </nav>
     </header>
 
-    <main class="container" data-recipe-id="bulves">
+    <main class="container" data-recipe-id="benedict">
       <article class="recipe-paper">
         <div class="recipe-header">
-          <span class="tag">Lietuviška klasika</span>
-          <h1>Česnakinio sviesto bulvės</h1>
+          <span class="tag">Vėlyvieji pusryčiai</span>
+          <h1>Klasikiniai Benedikto kiaušiniai</h1>
           <div class="recipe-meta">
-            <span>⏱️ 35 min.</span>
-            <span>🥔 <span id="yield-count">6</span> puselės</span>
+            <span>⏱️ 25 min.</span>
+            <span>🍳 <span id="yield-count">2</span> porcijos</span>
             <button onclick="window.print()" class="print-btn no-print">🖨️ Spausdinti</button>
           </div>
         </div>
 
-        <div class="recipe-hero-img" style="background-image: url('../bulvės.jpg')"></div>
+        <div class="recipe-hero-img" style="background-image: url('../benedict.jpg')"></div>
 
         <div class="recipe-grid-classic">
           <section class="ingredients-section">
             <h2>Ingredientai</h2>
             <div class="interactive-controls no-print">
-                <input type="number" id="servings" value="6" min="1">
+                <input type="number" id="servings" value="2" min="1">
                 <select id="unitToggle">
                     <option value="metric">Gramai (g)</option>
                     <option value="imperial">Vienetai</option>
@@ -56,12 +56,13 @@
           <section class="instructions-section">
             <h2>Gaminimo eiga</h2>
             <div class="steps-list">
-              <div class="step"><strong>1.</strong> Nuskuskite bulves ir perpjaukite perpus išilgai.</div>
-              <div class="step"><strong>2.</strong> Dubenyje sumaišykite bulves su druska, pipirais, paprikos milteliais ir aliejumi.</div>
-              <div class="step"><strong>3.</strong> Įdėkite bulves į karšto oro gruzdintuvę (arba orkaitę) 30 min. 200°C temperatūroje. Įpusėjus – apverskite.</div>
-              <div class="step"><strong>4.</strong> Kol bulvės kepa, sutarkuokite česnaką ir sumaišykite su sviestu.</div>
-              <div class="step"><strong>5.</strong> Iškepusias bulves įpjaukite per vidurį ir įdėkite česnakinio sviesto masę.</div>
-              <div class="step"><strong>6.</strong> Pagardinkite smulkinta petražole ir mėgaukitės.</div>
+               <div class="step"><strong>1.</strong> Užvirkite puodą su vandeniu ir virš jo padėkite kitą puoda arba karščiui atsparų dubenį</div>
+              <div class="step"><strong>2.</strong> Tame puode arba dubenyje sudėkite kiaušinio trynius citrinos sultis ir šlakelį vandens</div>
+              <div class="step"><strong>3.</strong> Plakite trynius, kol masė sutirštės. Tada po biški dėkite sviestą ir maišykite padažą.</div>
+              <div class="step"><strong>4.</strong> Išsilydžius visam sviestui ir masei sutirštejus puodą nuimkite nuo ugnies</div>
+              <div class="step"><strong>5.</strong> Imuškite kiaušinius į lengvai verdantį vandenį su actu ir virkite apie 3-4 min.</div>
+              <div class="step"><strong>6.</strong> Paskrudinkite bandelę, uždėkite lašišą ir kiaušinį.</div>
+              <div class="step"><strong>7.</strong> Užpilkite šiltu padažu ir pabarstykite pipirais.</div>
             </div>
           </section>
         </div>
@@ -79,18 +80,5 @@
   </div>
 
   <script src="../scripts/receptai.js"></script>
-  
-  <div id="contactModal" class="modal no-print">
-    <div class="modal-content">
-      <span class="close" onclick="closeModal('contactModal')">&times;</span>
-      <h2>Susisiekite</h2>
-      <form class="contact-form" onsubmit="handleContact(event)">
-        <input type="text" placeholder="Vardas" required>
-        <input type="email" placeholder="El. paštas" required>
-        <textarea placeholder="Žinutė..." rows="4" required></textarea>
-        <button type="submit" class="print-btn" style="width: 100%">Siųsti žinutę</button>
-      </form>
-    </div>
-  </div>
 </body>
 </html>
