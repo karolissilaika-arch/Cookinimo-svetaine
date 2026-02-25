@@ -4,7 +4,7 @@ const recipes = [
         ingredients: ["vištiena", "kokosų pienas", "svogūnai", "garam masala"], 
         link: "recipes/tikka-masala.html",
         laikas: "3 h", sudetingumas: "Vidutiniškai", 
-        img: "https://chefbook-prod.s3.us-west-2.amazonaws.com/1766927860073-1a04bd66dc9152",
+        img: "..//tikka-masala.jpg",
         category: "Indiška", desc: "Klasikinis indiškas patiekalas su sodriu padažu."
     },
     { 
@@ -12,7 +12,7 @@ const recipes = [
         ingredients: ["bulvės", "sviestas", "česnakas", "petražolės"], 
         link: "recipes/bulves.html",
         laikas: "35 min", sudetingumas: "Lengvai", 
-        img: "https://images.unsplash.com/photo-1518977676601-b53f02ac6d31?auto=format&fit=crop&w=800&q=80",
+        img: "..//bulves.jpg",
         category: "Garnyras", desc: "Traškios bulvytės su aromatingu česnakiniu sviestu."
     }, 
     { 
@@ -20,7 +20,7 @@ const recipes = [
         ingredients: ["faršas", "miltai", "kiaušinis", "kuminas"], 
         link: "recipes/khinkaliai.html",
         laikas: "2 h", sudetingumas: "Vidutiniškai", 
-        img: "https://images.unsplash.com/photo-1626128665085-483747621778?auto=format&fit=crop&w=800&q=80",
+        img: "..//khinkaliai.jpg",
         category: "Sakartvelo", desc: "Sultingi tradiciniai koldūnai su mėsos sultiniu viduje."
     },
     { 
@@ -242,4 +242,5 @@ window.onclick = function(event) {
 // Mobile menu toggle
 document.getElementById('mobile-menu').onclick = () => {
     document.getElementById('nav-content').classList.toggle('active');
+
 };
